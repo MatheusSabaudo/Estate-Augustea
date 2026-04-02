@@ -1,0 +1,222 @@
+.pageHero {
+  position: relative;
+  padding: 12rem 0 5rem;
+  background-image: url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+.pageHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10,10,15,0.6), rgba(10,10,15,0.95));
+}
+.pageHeroContent { position: relative; z-index: 1; }
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--stone);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.pageSubtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(242,237,228,0.65);
+}
+
+.mapBanner {
+  padding: 3rem 0;
+  background: var(--night-mid);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  text-align: center;
+}
+.mapText {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(242,237,228,0.6);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.locationsSection { padding: 5rem 0; }
+
+.locationsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.locationCard {
+  background: var(--night-mid);
+  border: 1px solid rgba(201,168,76,0.08);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.locationCard:hover {
+  border-color: rgba(201,168,76,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.locationCard.featured {
+  grid-column: span 2;
+}
+
+.locationImg {
+  position: relative;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+}
+.locationCard.featured .locationImg { height: 340px; }
+
+.locationImgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(20,20,32,0.85));
+}
+
+.locationRegion {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  background: rgba(10,10,15,0.8);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold);
+}
+
+.locationPeriod {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: rgba(242,237,228,0.6);
+}
+
+.locationBody { padding: 1.75rem; }
+
+.locationName {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--stone);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+.locationCity {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: rgba(217,208,192,0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.locationDesc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: rgba(242,237,228,0.65);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.locationMeta {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(201,168,76,0.1);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  margin-bottom: 1.25rem;
+}
+
+.metaItem { display: flex; gap: 0.5rem; align-items: baseline; }
+
+.metaLabel {
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--stone-dark);
+}
+
+.metaValue {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--gold);
+}
+
+.locationCta {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  transition: letter-spacing 0.3s;
+}
+.locationCta:hover { letter-spacing: 0.15em; }
+
+/* CTA BANNER */
+.ctaBanner {
+  position: relative;
+  padding: 6rem 0;
+  background-image: url('https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.ctaBannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,15,0.85);
+}
+.ctaBannerContent { position: relative; z-index: 1; }
+.ctaBannerTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--stone);
+  margin-bottom: 1rem;
+}
+.ctaBannerText {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: rgba(242,237,228,0.65);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+}
+.btnOutline {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btnOutline:hover { background: rgba(201,168,76,0.1); }
+
+@media (max-width: 900px) {
+  .locationsGrid { grid-template-columns: 1fr 1fr; }
+  .locationCard.featured { grid-column: span 2; }
+}
+@media (max-width: 600px) {
+  .locationsGrid { grid-template-columns: 1fr; }
+  .locationCard.featured { grid-column: span 1; }
+}

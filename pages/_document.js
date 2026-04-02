@@ -1,0 +1,60 @@
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+export default class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="it">
+        <Head>
+          {/* Preconnect per Google Fonts */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          
+          {/* Google Fonts - già presenti in globals.css, ma qui per performance */}
+          <link 
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" 
+            rel="stylesheet" 
+          />
+          
+          {/* Favicon */}
+          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          
+          {/* Meta tag generici */}
+          <meta charSet="UTF-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="theme-color" content="#0A0A0F" />
+          <meta name="color-scheme" content="dark" />
+          
+          {/* Open Graph / Social Media */}
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Estate Augustea" />
+          <meta property="og:title" content="Estate Augustea – Teatro e Cultura nelle Aree Archeologiche Italiane" />
+          <meta property="og:description" content="Spettacoli teatrali, concerti, cinema e incontri culturali nelle più belle aree archeologiche d'Italia. Estate 2026: Giugno – Settembre." />
+          <meta property="og:image" content="https://www.estateaugustea.it/og-image.jpg" />
+          <meta property="og:url" content="https://www.estateaugustea.it" />
+          
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Estate Augustea – Teatro e Cultura nelle Aree Archeologiche Italiane" />
+          <meta name="twitter:description" content="Spettacoli teatrali, concerti, cinema e incontri culturali nelle più belle aree archeologiche d'Italia." />
+          <meta name="twitter:image" content="https://www.estateaugustea.it/og-image.jpg" />
+          
+          {/* Meta tag per iOS */}
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+          <meta name="apple-mobile-web-app-title" content="Estate Augustea" />
+          
+          {/* Meta tag per Android */}
+          <meta name="mobile-web-app-capable" content="yes" />
+          
+          {/* Manifest per PWA (opzionale) */}
+          <link rel="manifest" href="/manifest.json" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}

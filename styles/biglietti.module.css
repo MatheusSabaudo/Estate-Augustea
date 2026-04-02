@@ -1,0 +1,639 @@
+/* ============================================
+   VARIABILI CSS
+   ============================================ */
+:root {
+  --night: #0a0a0f;
+  --night-mid: #14141f;
+  --gold: #c9a84c;
+  --gold-light: #dbb95c;
+  --gold-dark: #a8893a;
+  --stone: #f2ede4;
+  --stone-dark: #e0d9ce;
+  --error: #e74c3c;
+  --success: #27ae60;
+  --font-display: 'Cinema', 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.pageHero {
+  position: relative;
+  height: 35vh;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+  overflow: hidden;
+}
+
+.pageHeroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+.pageHeroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: white;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.pageSubtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: rgba(255,255,255,0.7);
+}
+
+/* ============================================
+   MAIN SECTION
+   ============================================ */
+.main {
+  padding: 4rem 0;
+  background: var(--stone);
+  min-height: 60vh;
+}
+
+/* ============================================
+   STEPS (indicatori di progressione)
+   ============================================ */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  position: relative;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  right: 60px;
+  height: 2px;
+  background: rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+.step {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--stone);
+  padding: 0 0.5rem;
+}
+
+.stepNum {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 2px solid rgba(0,0,0,0.15);
+  border-radius: 50%;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.step.active .stepNum {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--night);
+}
+
+.step.done .stepNum {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+.stepLabel {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #666;
+}
+
+.step.active .stepLabel {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.step.done .stepLabel {
+  color: var(--success);
+}
+
+/* ============================================
+   STEP CONTENT
+   ============================================ */
+.stepContent {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--night);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+}
+
+/* ============================================
+   EVENTI LIST (step 1)
+   ============================================ */
+.eventsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.eventRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.eventRow:hover {
+  background: #f0f0f0;
+  transform: translateX(4px);
+}
+
+.eventRow.selectedRow {
+  background: rgba(201,168,76,0.1);
+  border-color: var(--gold);
+}
+
+.eventRowImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.eventRowInfo {
+  flex: 1;
+}
+
+.eventRowCat {
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(201,168,76,0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.eventRowTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.25rem 0;
+  color: var(--night);
+}
+
+.eventRowMeta {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  color: #777;
+  margin: 0;
+}
+
+.eventRowPrice {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+.radio {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.radioSelected {
+  border-color: var(--gold);
+  background: var(--gold);
+  box-shadow: inset 0 0 0 4px white;
+}
+
+/* ============================================
+   QUANTITY SELECTOR
+   ============================================ */
+.qtySelector {
+  background: #f8f8f8;
+  padding: 1.25rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.qtyLabel {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.qtyControls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.qtyControls button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qtyControls button:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: white;
+}
+
+.qtyControls span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: center;
+}
+
+.qtyTotal {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--night);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* ============================================
+   STEP NAVIGATION
+   ============================================ */
+.stepNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.btnBack {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnBack:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.btnNext {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  background: var(--gold);
+  border: none;
+  border-radius: 40px;
+  color: var(--night);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnNext:hover:not(.disabled) {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201,168,76,0.3);
+}
+
+.btnNext.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnNext:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* ============================================
+   FORM (step 2)
+   ============================================ */
+.selectedSummary {
+  background: rgba(201,168,76,0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.summaryLabel {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  color: var(--gold);
+  margin-right: 0.5rem;
+}
+
+.summaryEvent {
+  font-family: var(--font-body);
+  color: var(--night);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.formGroup {
+  flex: 1;
+  min-width: 200px;
+}
+
+.formGroup label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #666;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+}
+
+.formNote {
+  background: #f8f8f8;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.formNote p {
+  margin: 0;
+}
+
+/* ============================================
+   CONFERMA (step 3)
+   ============================================ */
+.confirmStep {
+  text-align: center;
+}
+
+.confirmIcon {
+  font-size: 3rem;
+  color: var(--success);
+  margin-bottom: 1rem;
+}
+
+.confirmTitle {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--night);
+  margin-bottom: 1rem;
+}
+
+.confirmText {
+  font-family: var(--font-body);
+  color: #666;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.confirmDetails {
+  background: #f8f8f8;
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  text-align: left;
+}
+
+.confirmRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+}
+
+.confirmRow:last-child {
+  border-bottom: none;
+}
+
+.confirmRow span:first-child {
+  color: #888;
+}
+
+.confirmRow span:last-child {
+  font-weight: 500;
+  color: var(--night);
+}
+
+.totalPrice {
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+  font-size: 1rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .main {
+    padding: 2rem 0;
+  }
+
+  .stepContent {
+    padding: 1.25rem;
+  }
+
+  .stepTitle {
+    font-size: 1.25rem;
+  }
+
+  .eventRow {
+    flex-wrap: wrap;
+  }
+
+  .eventRowImg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .eventRowInfo {
+    flex: 1 1 100%;
+    margin-top: 0.5rem;
+  }
+
+  .eventRowPrice {
+    margin-left: auto;
+  }
+
+  .steps {
+    margin-bottom: 2rem;
+  }
+
+  .steps::before {
+    left: 30px;
+    right: 30px;
+  }
+
+  .stepNum {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .stepLabel {
+    font-size: 0.6rem;
+  }
+
+  .formRow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stepNav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stepNav .btnBack,
+  .stepNav .btnNext {
+    width: 100%;
+    text-align: center;
+  }
+
+  .confirmDetails {
+    margin: 0 1rem 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageHero {
+    min-height: 220px;
+  }
+
+  .eventRow {
+    padding: 0.75rem;
+  }
+
+  .qtyControls button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .confirmTitle {
+    font-size: 1.35rem;
+  }
+}

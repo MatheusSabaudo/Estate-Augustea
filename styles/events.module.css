@@ -1,0 +1,438 @@
+/* ============================================
+   VARIABILI CSS (assicurati che siano definite)
+   ============================================ */
+:root {
+  --night: #0a0a0f;
+  --night-mid: #14141f;
+  --gold: #c9a84c;
+  --gold-light: #dbb95c;
+  --stone: #f2ede4;
+  --font-display: 'Cinema', 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.pageHero {
+  position: relative;
+  height: 40vh;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+  overflow: hidden;
+}
+
+.pageHeroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+.pageHeroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.pageSubtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: rgba(255,255,255,0.7);
+}
+
+/* ============================================
+   EVENTI SECTION
+   ============================================ */
+.eventsSection {
+  padding: 4rem 0;
+  background: var(--stone);
+}
+
+/* FILTRI */
+.filters {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.filterGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filterLabel {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.filterBtn {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 40px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.filterBtn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #0a0a0f;
+}
+
+/* RISULTATI COUNT */
+.resultsCount {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: #666;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* GRIGLIA EVENTI */
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD EVENTO */
+.eventCard {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.eventCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* IMMAGINE CARD */
+.eventImg {
+  position: relative;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  background-color: #1a1a2e;
+}
+
+/* DATA EVENTO */
+.eventDate {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(4px);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  border-radius: 12px;
+  min-width: 55px;
+  z-index: 2;
+}
+
+.day {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1;
+  display: block;
+}
+
+.month {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+/* CATEGORIA */
+.eventCategory {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: var(--gold);
+  padding: 0.3rem 0.8rem;
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #0a0a0f;
+  border-radius: 30px;
+  z-index: 2;
+}
+
+/* CORPO CARD */
+.eventBody {
+  padding: 1.25rem;
+}
+
+.eventTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #1a1a2e;
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.eventSub {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* META INFORMAZIONI */
+.eventMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.eventMeta svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* FOOTER CARD */
+.eventFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #eee;
+}
+
+.eventPrice {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.btnBuy {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 1rem;
+  background: #1a1a2e;
+  color: white;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.eventCard:hover .btnBuy {
+  background: var(--gold);
+  color: #0a0a0f;
+}
+
+/* ============================================
+   NO RESULTS
+   ============================================ */
+.noResults {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 16px;
+}
+
+.noResults p {
+  font-family: var(--font-body);
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.resetBtn {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  background: var(--gold);
+  border: none;
+  border-radius: 40px;
+  color: #0a0a0f;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.resetBtn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   CTA SECTION (biglietti)
+   ============================================ */
+.ctaSection {
+  padding: 5rem 0;
+  background: var(--night);
+  border-top: 1px solid rgba(201,168,76,0.1);
+}
+
+.ctaBox {
+  text-align: center;
+  padding: 3rem;
+  background: var(--night-mid);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 24px;
+}
+
+.ctaLabel {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--stone);
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: rgba(242,237,228,0.65);
+  margin-bottom: 2rem;
+}
+
+.btnPrimary {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  background: var(--gold);
+  color: var(--night);
+  border-radius: 40px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201,168,76,0.3);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .eventsSection {
+    padding: 2rem 0;
+  }
+  
+  .eventsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .filterGroup {
+    gap: 0.5rem;
+  }
+  
+  .filterBtn {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+  
+  .filterLabel {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ctaBox {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .eventImg {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageHero {
+    min-height: 250px;
+  }
+  
+  .eventTitle {
+    font-size: 1rem;
+  }
+  
+  .eventSub {
+    font-size: 0.75rem;
+  }
+}
