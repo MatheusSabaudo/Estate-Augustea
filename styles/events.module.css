@@ -1,18 +1,4 @@
 /* ============================================
-   VARIABILI CSS (assicurati che siano definite)
-   ============================================ */
-:root {
-  --night: #0a0a0f;
-  --night-mid: #14141f;
-  --gold: #c9a84c;
-  --gold-light: #dbb95c;
-  --stone: #f2ede4;
-  --font-display: 'Cinema', 'Times New Roman', serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-/* ============================================
    HERO SECTION
    ============================================ */
 .pageHero {
