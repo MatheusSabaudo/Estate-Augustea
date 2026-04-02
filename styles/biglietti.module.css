@@ -1,20 +1,4 @@
-/* ============================================
-   VARIABILI CSS
-   ============================================ */
-:root {
-  --night: #0a0a0f;
-  --night-mid: #14141f;
-  --gold: #c9a84c;
-  --gold-light: #dbb95c;
-  --gold-dark: #a8893a;
-  --stone: #f2ede4;
-  --stone-dark: #e0d9ce;
-  --error: #e74c3c;
-  --success: #27ae60;
-  --font-display: 'Cinema', 'Times New Roman', serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-}
+
 
 /* ============================================
    HERO SECTION
