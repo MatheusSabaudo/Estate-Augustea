@@ -56,12 +56,12 @@ export default function Home() {
           <p className={styles.heroEyebrow}>Estate 2026 - Giugno - Settembre</p>
           <h1 className={styles.heroTitle}>
             L&apos;Arte Incontra
-            <br />
+            <br className={styles.heroBreak} />
             <span className={styles.heroAccent}>L&apos;Antichita</span>
           </h1>
           <p className={styles.heroSub}>
             Spettacoli teatrali, concerti e cinema nelle piu suggestive
-            <br />
+            <br className={styles.heroBreak} />
             aree archeologiche d&apos;Italia
           </p>
           <div className={styles.heroCtas}>
