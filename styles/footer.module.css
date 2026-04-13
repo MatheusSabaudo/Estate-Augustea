@@ -1,7 +1,9 @@
 .footer {
-  background: var(--night-mid);
+  background:
+    radial-gradient(circle at top center, rgba(201, 168, 76, 0.08), transparent 32%),
+    linear-gradient(180deg, rgba(20, 20, 32, 0.98), rgba(10, 10, 15, 1));
   border-top: 1px solid rgba(201, 168, 76, 0.15);
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 
 .ornament {
@@ -20,33 +22,35 @@
 
 .diamond {
   color: var(--gold);
-  font-size: 0.6rem;
+  font-size: 0.72rem;
 }
 
 .inner {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: minmax(0, 2.3fr) 1fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 3rem;
 }
 
-.brand {}
+.brand {
+  padding-right: 1rem;
+}
 
-.logo {
+.brandTitle {
   font-family: var(--font-display);
-  font-size: 1.4rem;
-  color: var(--gold);
-  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  color: var(--stone);
   margin-bottom: 0.75rem;
 }
 
-.tagline {
+.brandText {
+  max-width: 24rem;
   font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-style: italic;
-  color: var(--stone-dark);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: rgba(217, 208, 192, 0.72);
+  margin-bottom: 1.6rem;
+  line-height: 1.5;
 }
 
 .social {
@@ -74,7 +78,7 @@
 .col h4 {
   font-family: var(--font-display);
   font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 1.25rem;
@@ -93,6 +97,7 @@
   font-size: 0.8rem;
   color: var(--stone-dark);
   transition: color 0.3s ease;
+  line-height: 1.6;
 }
 
 .col ul li a:hover {
@@ -112,11 +117,11 @@
 .bottom p {
   font-family: var(--font-ui);
   font-size: 0.7rem;
-  color: rgba(217, 208, 192, 0.5);
+  color: rgba(217, 208, 192, 0.56);
 }
 
 .bottom a {
-  color: rgba(217, 208, 192, 0.5);
+  color: rgba(217, 208, 192, 0.56);
   transition: color 0.3s ease;
 }
 
@@ -128,6 +133,11 @@
   .inner {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+    padding-right: 0;
   }
 }
 

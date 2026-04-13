@@ -4,6 +4,7 @@
   --gold: #C9A84C;
   --gold-light: #E8C97A;
   --gold-dark: #9A7A32;
+  --brand-ink: #f5efe5;
   --stone: #F2EDE4;
   --stone-dark: #D9D0C0;
   --night: #0A0A0F;
@@ -119,4 +120,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .animate-fade-in {
   animation: fadeIn 1s ease forwards;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(232, 201, 122, 0.9);
+  outline-offset: 3px;
 }

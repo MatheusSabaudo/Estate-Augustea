@@ -293,7 +293,10 @@
   border-radius: 50%;
   border: 1px solid #ddd;
   background: white;
+  color: var(--night);
   font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -301,7 +304,12 @@
 .qtyControls button:hover {
   background: var(--gold);
   border-color: var(--gold);
-  color: white;
+  color: var(--night);
+}
+
+.qtyControls button:focus-visible {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.25);
 }
 
 .qtyControls span {
@@ -621,4 +629,13 @@
   .confirmTitle {
     font-size: 1.35rem;
   }
+}
+.eventRow {
+  width: 100%;
+  text-align: left;
+}
+
+.eventRow:focus-visible {
+  outline: 3px solid rgba(201, 168, 76, 0.45);
+  outline-offset: 3px;
 }

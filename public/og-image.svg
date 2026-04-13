@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#1a1713" />
+      <stop offset="58%" stop-color="#0d0d0e" />
+      <stop offset="100%" stop-color="#050607" />
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8dc8b" />
+      <stop offset="48%" stop-color="#d2a437" />
+      <stop offset="100%" stop-color="#8c6117" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="600" cy="315" r="220" fill="#c9a84c" opacity=".08" />
+  <circle cx="600" cy="315" r="156" fill="none" stroke="url(#gold)" stroke-width="2" opacity=".5" />
+  <text x="600" y="245" text-anchor="middle" fill="#d2a437" font-size="24" letter-spacing="10" font-family="Montserrat, Arial, sans-serif">ESTATE 2026</text>
+  <text x="600" y="326" text-anchor="middle" fill="#f5efe7" font-size="68" letter-spacing="4" font-family="Cinzel, Georgia, serif">ESTATE</text>
+  <text x="600" y="398" text-anchor="middle" fill="#f5efe7" font-size="68" letter-spacing="4" font-family="Cinzel, Georgia, serif">AUGUSTEA</text>
+  <path d="M370 454h460" stroke="url(#gold)" stroke-width="2" opacity=".7" />
+  <text x="600" y="510" text-anchor="middle" fill="#f5efe7" font-size="24" font-family="Cormorant Garamond, Georgia, serif">Teatro e cultura nelle aree archeologiche italiane</text>
+</svg>
