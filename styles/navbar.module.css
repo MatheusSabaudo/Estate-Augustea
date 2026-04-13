@@ -197,11 +197,32 @@
 
   .wordmarkTop {
     font-size: 0.58rem;
-    letter-spacing: 0.32em;
+    letter-spacing: 0.24em;
   }
 
   .wordmarkBottom {
-    font-size: 1.08rem;
-    letter-spacing: 0.12em;
+    font-size: 0.96rem;
+    letter-spacing: 0.08em;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .inner {
+    padding: 0 0.9rem;
+  }
+
+  .wordmarkTop {
+    font-size: 0.52rem;
+    letter-spacing: 0.18em;
+  }
+
+  .wordmarkBottom {
+    font-size: 0.88rem;
+    letter-spacing: 0.05em;
   }
 }

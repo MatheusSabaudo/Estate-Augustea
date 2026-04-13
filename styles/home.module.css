@@ -815,6 +815,7 @@
   .heroCtas {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .upcomingItem {
@@ -843,6 +844,34 @@
 }
 
 @media (max-width: 560px) {
+  .hero {
+    min-height: auto;
+    padding: 7.5rem 0 4.5rem;
+  }
+
+  .heroContent {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .heroEyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 1rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.2rem, 12vw, 3.4rem);
+    line-height: 1.02;
+    margin-bottom: 1rem;
+  }
+
+  .heroSub {
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
   .heroSide {
     width: 100%;
     margin-bottom: 1.2rem;
@@ -860,6 +889,21 @@
 
   .heroSideText {
     font-size: 0.95rem;
+  }
+
+  .heroCtas {
+    gap: 0.85rem;
+  }
+
+  .btnPrimary,
+  .btnOutline {
+    width: min(100%, 320px);
+    padding: 0.95rem 1.2rem;
+    text-align: center;
+  }
+
+  .heroScroll {
+    display: none;
   }
 
   .intro,
@@ -885,5 +929,25 @@
 
   .ctaBox {
     padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    padding-top: 7rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2rem, 11vw, 2.7rem);
+  }
+
+  .heroSideCard {
+    padding: 0.9rem;
+  }
+
+  .heroSideLabel,
+  .heroSideEyebrow,
+  .heroSideMeta span {
+    letter-spacing: 0.14em;
   }
 }

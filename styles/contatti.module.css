@@ -399,6 +399,21 @@
 }
 
 @media (max-width: 600px) {
+  .pageHero {
+    padding: 8rem 0 4rem;
+  }
+
+  .pageTitle {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .pageSubtitle,
+  .infoText,
+  .mapText,
+  .newsletterText {
+    font-size: 1rem;
+  }
+
   .infoItem {
     flex-direction: column;
   }

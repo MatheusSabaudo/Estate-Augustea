@@ -409,12 +409,39 @@
 }
 
 @media (max-width: 520px) {
+  .pageHero {
+    padding: 8rem 0 3.75rem;
+  }
+
+  .pageTitle {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .pageSubtitle,
+  .mapText,
+  .ctaBannerText {
+    font-size: 1rem;
+  }
+
   .locationBody,
   .locationVisual {
     padding: 1.35rem;
   }
 
+  .featured .locationVisual {
+    min-height: 280px;
+  }
+
+  .locationHalo,
+  .featured .locationHalo {
+    inset: 1rem;
+  }
+
   .locationInitials {
     letter-spacing: 0.12em;
+  }
+
+  .locationLines {
+    display: none;
   }
 }

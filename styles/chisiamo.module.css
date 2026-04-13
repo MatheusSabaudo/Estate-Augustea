@@ -306,6 +306,20 @@
 }
 
 @media (max-width: 600px) {
+  .pageHero {
+    padding: 8rem 0 4rem;
+  }
+
+  .pageTitle {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .pageSubtitle,
+  .paragraph,
+  .ctaText {
+    font-size: 1rem;
+  }
+
   .valuesGrid {
     grid-template-columns: 1fr;
   }
